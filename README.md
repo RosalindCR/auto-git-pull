@@ -1,7 +1,7 @@
 # auto-git-pull
 利用WebHook实现PHP自动部署Git代码
 
-##一、为AMH设置Git自动部署
+## 一、为AMH设置Git自动部署
 ----------
 注意：本项目以AMH服务器作web运行环境做配置，其它运行环境的请参照修改！
 为方便统一管理，现作两点规范：
@@ -11,7 +11,7 @@
 
 ----------
 
-###1. 生成公钥
+### 1. 生成公钥
 
 公钥有两个：1. git用户公钥，2. 部署公钥：
 
@@ -26,7 +26,7 @@ git用户公钥
 	sudo -Hu www ssh-keygen -t rsa 
 	# 请选择 “no passphrase”，一直回车下去
 
-###2. 准备钩子文件
+### 2. 准备钩子文件
 复制项目文件到/home/wwwroot/index/web目录
 
 	cd /home/wwwroot/index/web
@@ -38,13 +38,13 @@ git用户公钥
 	
 	chmod 777 /home/wwwroot/index/log
 
-###3.修改git配置和保存git用户名密码
+### 3.修改git配置和保存git用户名密码
 
 	sudo -Hu www git config --global credential.helper store # 永久保存
 	sudo -Hu www git config --global user.name "amhtest" 
 	sudo -Hu www git config --global user.email "amh@test.com" # 邮箱请与git服务器登录邮箱上一致
 
-####例如Git服务是Coding网站
+#### 例如Git服务是Coding网站
 1.添加用户公钥
 
 复制/root/.ssh/id_rsa.pub内容到个人设置页的SSH公钥里添加即可（[https://coding.NET/user/account/setting/keys](https://coding.NET/user/account/setting/keys "https://coding.NET/user/account/setting/keys")）
@@ -61,8 +61,8 @@ git用户公钥
 
 稍过几秒刷新页面查看hook状态，显示为绿色勾就OK了。
 
-##二、初始化
-###1.amh上新建网站 如：test
+## 二、初始化
+### 1.amh上新建网站(略) 如：test
 查看wwwroot目录是否已生产test目录
 
 	ls /home/wwwroot/
@@ -74,7 +74,7 @@ index  test
 	rm -rvf /home/wwwroot/test/web/*
 	chown -R www:www /home/wwwroot/test/web
 
-###2.git clone 项目文件到网站目录
+### 2.git clone 项目文件到网站目录
 
 	sudo -Hu www git clone https://git.coding.net/sujianchao/test.git  /home/wwwroot/test/web  --depth=1
 这个时候应该会要求你输入一次Coding的帐号和密码，因为上面我们设置了永久保存用户名和密码，所以之后再执行git就不会要求输入用户名和密码了。
