@@ -62,7 +62,7 @@ git用户公钥
 稍过几秒刷新页面查看hook状态，显示为绿色勾就OK了。
 
 ## 二、初始化
-### 1.amh上新建网站 如：test
+### 1.amh上新建网站(略) 如：test
 查看wwwroot目录是否已生产test目录
 
 	ls /home/wwwroot/
