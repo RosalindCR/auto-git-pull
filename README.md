@@ -1,5 +1,7 @@
 # Auto git pull
 
+Forked from [antriver/auto-git-pull](https://github.com/antriver/auto-git-pull.git)
+
 Automatically pull when changes are pushed to a Git repository.
 (Actually it does a `git fetch` followed by `git reset` but that wasn't as catchy.)
 
