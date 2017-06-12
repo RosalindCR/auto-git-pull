@@ -44,6 +44,14 @@ git用户公钥
 	sudo -Hu www git config --global user.name "amhtest" 
 	sudo -Hu www git config --global user.email "amh@test.com" # 邮箱请与git服务器登录邮箱上一致
 
+### 4.配置www用户的sudo权限，否则exec执行出错
+	visudo
+	#用命令visudo直接编辑/etc/sudoers文件
+	#在root行后:root    ALL=(ALL)       ALL
+	#添加一行:www    ALL=(www:www)       ALL
+
+
+
 #### 例如Git服务是Coding网站
 1.添加用户公钥
 
