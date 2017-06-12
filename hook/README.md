@@ -50,8 +50,6 @@ git用户公钥
 	#在root行后:root    ALL=(ALL)       ALL
 	#添加一行:www    ALL=(www:www)       ALL
 
-
-
 #### 例如Git服务是Coding网站
 1.添加用户公钥
 
