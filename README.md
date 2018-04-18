@@ -32,7 +32,7 @@ git用户公钥
 	cd /home/wwwroot/index/web
 	git clone https://github.com/sujianchao/auto-git-pull.git
 
-确保你的hook文件可以访问：http://amh-serverip:8888/hook/index.php(默认输出Error, missing repo!)，钩子准备完成。(amh服务器默认端口为8888）
+确保你的hook文件可以访问：http://amh-serverip:8888/hook/index.php (默认输出Error, missing repo!)，钩子准备完成。(amh服务器默认端口为8888）
 
 修改钩子日志目录权限（本项目配置日志路径默认在amh的index项目log路径下，方便管理）
 	
